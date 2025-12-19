@@ -1,7 +1,7 @@
 {
    "name": "mvsrp1map",
    "version": "1.0.0",
-   "description": "MV Database Map",
+   "description": "Metaverse spatial fabric map service for Railway",
    "main": "server.js",
    "scripts": {
       "start": "node server",
@@ -9,10 +9,10 @@
    },
    "repository": {
       "type": "git",
-      "url": "https://github.com/MetaversalCorp/MVS_Sample.git"
+      "url": "https://github.com/MetaversalCorp/MSF_Map_Railway.git"
    },
    "author": "Metaversal Corporation",
-   "license": "ISC",
+   "license": "Apache-2.0",
    "dependencies": {
       "@metaversalcorp/mvsf": "^0.3.0",
       "@metaversalcorp/mvsql_mysql": "^0.1.0",
