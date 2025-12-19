@@ -379,14 +379,49 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
    console.log (`Database updates complete.`);
 }
 
+   async ExecSQL () 
+   {
+      const sSQLFile = path.join (__dirname, 'MSF_Map.sql');
+      const pConfig = { ...Settings.SQL.config };
+      let pConn;
+
+      delete pConfig.database; // Remove database from config to connect without it
+      
+      try 
+      {
+         // Read SQL file asynchronously
+         const sSQLContent = fs.readFileSync (sSQLFile, 'utf8');
+
+         // Create connection
+         pConn = await mysql.createConnection (pConfig);
+
+         // Execute SQL
+         const [results] = await connection.query (sql);
+
+         console.log ('SQL executed successfully:', results);
+      } 
+      catch (err) 
+      {
+         console.error ('Error executing SQL:', err.message);
+      } 
+      finally 
+      {
+         if (pConn) 
+         {
+            await pConn.end ();
+         }
+      }
+   }
+
    async onSQLReady (pMVSQL, err)
    {
       if (pMVSQL)
       {
-         try
+//         try
          {
             // Initialize database if it doesn't exist
-            await this.InitializeDatabase (pMVSQL);
+//            await this.InitializeDatabase (pMVSQL);
+            await this.ExecSQL ();
 
             this.ReadFromEnv (Settings.MVSF, [ "nPort", "key" ]);
 
@@ -397,10 +432,10 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
             console.log ('SQL Server READY');
             InitSQL (pMVSQL, this.#pServer, Settings.Info);
          }
-         catch (initErr)
+//         catch (initErr)
          {
-            console.error ('Error during database initialization:', initErr);
-            console.log ('SQL Server Connect Error: ', initErr);
+//            console.error ('Error during database initialization:', initErr);
+//            console.log ('SQL Server Connect Error: ', initErr);
          }
       }
       else
