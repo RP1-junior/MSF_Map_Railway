@@ -393,12 +393,17 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
       {
          // Read SQL file asynchronously
          const sSQLContent = fs.readFileSync (sSQLFile, 'utf8');
+         let aStmt = sSQLContent.split ('DELIMITER');
+
+         for (let i=1; i < aStmt.length; i++)
+            aStmt[i] = 'DELIMTER' + aStmt[i];
 
          // Create connection
          pConn = await mysql.createConnection (pConfig);
 
-         // Execute SQL
-         await pConn.query (sSQLContent);
+         for (let i=0; i < aStmt.length; i++)
+            // Execute SQL
+            await pConn.query (aStmt[i]);
 
          console.log ('SQL executed successfully (' + sFilename + ')');
       } 
@@ -424,9 +429,6 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
             // Initialize database if it doesn't exist
 //            await this.InitializeDatabase (pMVSQL);
             await this.ExecSQL ('MSF_Map.sql', true);
-console.log ('DB Tables Installed!!!!');
-            await this.ExecSQL ('tmp.sql', false);
-console.log ('DB Func/Proc Installed!!!!');
 
             this.ReadFromEnv (Settings.MVSF, [ "nPort", "key" ]);
 
