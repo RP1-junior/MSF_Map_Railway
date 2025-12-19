@@ -1,7 +1,7 @@
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -96,7 +96,7 @@ DROP PROCEDURE IF EXISTS call_RMCObject_Event_RMTObject_Open;
 DROP PROCEDURE IF EXISTS call_RMCObject_Event_Transform;
 DROP PROCEDURE IF EXISTS call_RMCObject_Event_Type;
 DROP PROCEDURE IF EXISTS call_RMCObject_Log;
-DROP PROCEDURE IF EXISTS call_RMCObject_Select(;
+DROP PROCEDURE IF EXISTS call_RMCObject_Select;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate_Bound;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate_Name;
@@ -222,7 +222,7 @@ DROP PROCEDURE IF EXISTS set_RMTObject_Type;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -258,7 +258,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -383,7 +383,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -428,7 +428,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -540,7 +540,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -621,7 +621,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -692,7 +692,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -812,7 +812,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -837,7 +837,7 @@ CREATE TABLE IF NOT EXISTS Version
 (
    dtStamp                             DATETIME          NOT NULL DEFAULT CURRENT_TIMESTAMP,
    nVersion                            INT               NOT NULL,
-   sDescription                        VARCHAR (255)     NOT NULL
+   sDescription                        VARCHAR (255)     NOT NULL,
 
    CONSTRAINT PK_Version PRIMARY KEY
    (
@@ -850,7 +850,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -908,7 +908,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -966,7 +966,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1008,7 +1008,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1045,7 +1045,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1094,7 +1094,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1171,7 +1171,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1208,7 +1208,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1246,7 +1246,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1324,7 +1324,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1359,7 +1359,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1394,7 +1394,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1429,7 +1429,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1464,7 +1464,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1504,7 +1504,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1542,7 +1542,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1577,7 +1577,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1616,7 +1616,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1654,7 +1654,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1712,7 +1712,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1756,7 +1756,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1793,7 +1793,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1831,7 +1831,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1868,7 +1868,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1923,7 +1923,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1955,7 +1955,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -1995,7 +1995,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2026,7 +2026,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2062,7 +2062,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2108,7 +2108,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2149,7 +2149,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2192,7 +2192,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2269,7 +2269,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2315,7 +2315,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2399,7 +2399,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2477,7 +2477,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2555,7 +2555,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2639,7 +2639,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2713,7 +2713,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2856,7 +2856,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -2961,7 +2961,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3048,7 +3048,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3091,7 +3091,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3191,7 +3191,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3255,7 +3255,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3323,7 +3323,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3363,7 +3363,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3406,7 +3406,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3458,7 +3458,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3551,7 +3551,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3663,7 +3663,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3767,7 +3767,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -3892,7 +3892,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4015,7 +4015,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4138,7 +4138,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4415,7 +4415,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4540,7 +4540,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4680,7 +4680,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4834,7 +4834,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -4966,7 +4966,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5092,7 +5092,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5155,7 +5155,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5252,7 +5252,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5352,7 +5352,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5453,7 +5453,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5509,7 +5509,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5581,7 +5581,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5768,7 +5768,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5846,7 +5846,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -5923,7 +5923,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6000,7 +6000,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6046,7 +6046,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6130,7 +6130,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6208,7 +6208,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6286,7 +6286,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6373,7 +6373,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6457,7 +6457,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6531,7 +6531,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6674,7 +6674,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6758,7 +6758,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -6905,7 +6905,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7010,7 +7010,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7094,7 +7094,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7137,7 +7137,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7244,7 +7244,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7308,7 +7308,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7376,7 +7376,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7434,7 +7434,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7498,7 +7498,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7565,7 +7565,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7658,7 +7658,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7698,7 +7698,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7741,7 +7741,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7811,7 +7811,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7863,7 +7863,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -7956,7 +7956,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8057,7 +8057,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8186,7 +8186,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8369,7 +8369,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8494,7 +8494,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8617,7 +8617,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8740,7 +8740,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8866,7 +8866,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -8991,7 +8991,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9131,7 +9131,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9285,7 +9285,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9430,7 +9430,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9628,7 +9628,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9811,7 +9811,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9936,7 +9936,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -9982,7 +9982,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10066,7 +10066,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10144,7 +10144,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10231,7 +10231,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10309,7 +10309,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10399,7 +10399,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10483,7 +10483,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10552,7 +10552,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10712,7 +10712,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10796,7 +10796,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -10944,7 +10944,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11049,7 +11049,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11133,7 +11133,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11176,7 +11176,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11289,7 +11289,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11353,7 +11353,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11421,7 +11421,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11461,7 +11461,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11538,7 +11538,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11581,7 +11581,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11660,7 +11660,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11714,7 +11714,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11807,7 +11807,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -11897,7 +11897,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12026,7 +12026,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12195,7 +12195,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12320,7 +12320,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12443,7 +12443,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12569,7 +12569,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12692,7 +12692,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12819,7 +12819,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -12944,7 +12944,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13089,7 +13089,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13253,7 +13253,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13393,7 +13393,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13591,7 +13591,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13723,7 +13723,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13848,7 +13848,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13894,7 +13894,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -13972,7 +13972,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14050,7 +14050,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14120,7 +14120,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14281,7 +14281,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14355,7 +14355,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14498,7 +14498,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14568,7 +14568,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14716,7 +14716,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14759,7 +14759,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14822,7 +14822,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14886,7 +14886,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14926,7 +14926,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -14969,7 +14969,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15093,7 +15093,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15216,7 +15216,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15339,7 +15339,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15479,7 +15479,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15643,7 +15643,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15783,7 +15783,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -15937,7 +15937,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -16077,7 +16077,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -16275,7 +16275,7 @@ DELIMITER ;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
@@ -16430,7 +16430,7 @@ DROP PROCEDURE temp_Version_0;
 /*
 ** Copyright 2025 Metaversal Corporation.
 ** 
-** Licensed under the Apache License, Version 2.0 (the "License"); 
+** Licensed under the Apache License, Version 2.0 (the "License"), 
 ** you may not use this file except in compliance with the License. 
 ** You may obtain a copy of the License at 
 ** 
