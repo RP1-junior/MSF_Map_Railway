@@ -837,7 +837,7 @@ CREATE TABLE IF NOT EXISTS Version
 (
    dtStamp                             DATETIME          NOT NULL DEFAULT CURRENT_TIMESTAMP,
    nVersion                            INT               NOT NULL,
-   sDescription                        VARCHAR (255)     NOT NULL
+   sDescription                        VARCHAR (255)     NOT NULL,
 
    CONSTRAINT PK_Version PRIMARY KEY
    (
