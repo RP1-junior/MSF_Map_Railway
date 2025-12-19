@@ -96,7 +96,7 @@ DROP PROCEDURE IF EXISTS call_RMCObject_Event_RMTObject_Open;
 DROP PROCEDURE IF EXISTS call_RMCObject_Event_Transform;
 DROP PROCEDURE IF EXISTS call_RMCObject_Event_Type;
 DROP PROCEDURE IF EXISTS call_RMCObject_Log;
-DROP PROCEDURE IF EXISTS call_RMCObject_Select(;
+DROP PROCEDURE IF EXISTS call_RMCObject_Select;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate_Bound;
 DROP PROCEDURE IF EXISTS call_RMCObject_Validate_Name;
