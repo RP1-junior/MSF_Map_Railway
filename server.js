@@ -396,7 +396,7 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
          pConn = await mysql.createConnection (pConfig);
 
          // Execute SQL
-         const [results] = await connection.query (sql);
+         const [results] = await pConn.query (sql);
 
          console.log ('SQL executed successfully:', results);
       } 
