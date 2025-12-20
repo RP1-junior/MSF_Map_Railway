@@ -405,7 +405,7 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
             {
                x = aStmt[i].indexOf ('\n', 0) + 1;
                
-               await pConn.query ('DELIMTER' + aStmt[i].slice (0, x));
+               await pConn.query ('DELIMITER' + aStmt[i].slice (0, x));
             }
             else x = 0;
 
