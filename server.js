@@ -403,7 +403,7 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
 
          for (let i=0; i < aStmt.length; i++)
          {
-            console.log (aStmt[i]);
+            console.log (aStmt[i].slice (0, 100));
             // Execute SQL
             await pConn.query (aStmt[i]);
          }
