@@ -395,25 +395,25 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
          const sSQLContent = fs.readFileSync (sSQLFile, 'utf8');
          let aStmt = sSQLContent.split ('DELIMITER');
 
-         for (let i=1; i < aStmt.length; i++)
-         {
-            aStmt[i] = 'DELIMTER' + aStmt[i];
-
-            console.log (aStmt[i].slice (0, 100));
-         }
-/*
          // Create connection
          pConn = await mysql.createConnection (pConfig);
 
-         console.log ('SQL executed BEGIN (' + sFilename + ')');
+         let x;
          for (let i=0; i < aStmt.length; i++)
          {
+            if (i > 0)
+            {
+               x = aStmt[i].indexOf ('\n', 0) + 1;
+               
+               await pConn.query ('DELIMTER' + aStmt[i].slice (0, x));
+            }
+            else x = 0;
+
             // Execute SQL
-            await pConn.query (aStmt[i]);
+            await pConn.query (aStmt[i].slice (x));
          }
 
-         console.log ('SQL executed END (' + sFilename + ')');
-*/         
+         console.log ('SQL Installed (' + sFilename + ')');
       } 
       catch (err) 
       {
