@@ -1,24 +1,22 @@
 {
-   "name": "mvsrp1map",
-   "version": "1.0.0",
-   "description": "Metaverse spatial fabric map service for Railway",
-   "main": "server.js",
+   "name": "@metaversalcorp/msf_map_svc",
+   "version": "1.1.0",
+   "description": "Metaverse spatial fabric map service",
    "scripts": {
-      "start": "node server",
-      "dev": "nodemon server"
+      "build:win:mssql":   "npm run build:win:base && npm run build:win:web && copy .\\svc\\config\\SQL_Server\\*.* dist\\ && cd db\\SQL_Server\\_Create\\ && .\\Create.bat && copy ..\\_Distrib\\MSF_Map.sql ..\\..\\..\\dist\\",
+      "build:win:mysql":   "npm run build:win:base && npm run build:win:web && copy .\\svc\\config\\MySQL\\*.* dist\\ && cd db\\MySQL\\_Create\\ && .\\Create.bat && copy ..\\_Distrib\\MSF_Map.sql ..\\..\\..\\dist\\",
+      "build:win:web":     "mkdirp dist\\web && xcopy .\\sa\\site dist\\web /E /I /Y",
+      "build:win:base":    "mkdirp dist\\Handlers && mkdirp dist\\ssl && copy .\\svc\\handler.json dist\\ && copy .\\svc\\*.js dist\\ && copy .\\svc\\Handlers\\*.js dist\\Handlers",
+      "build:linux:mssql": "npm run build:linux:base && npm run build:linux:web && cp svc/config/SQL_Server/* dist/ && cd db/SQL_Server/_Create && chmod +x ./Create.sh && ./Create.sh && cp ../_Distrib/MSF_Map.sql ../../../dist/",
+      "build:linux:mysql": "npm run build:linux:base && npm run build:linux:web && cp svc/config/MySQL/* dist/ && cd db/MySQL/_Create && chmod +x ./Create.sh && ./Create.sh && cp ../_Distrib/MSF_Map.sql ../../../dist/",
+      "build:linux:web":   "mkdir -p dist/web && cp -r sa/site/* dist/web/",
+      "build:linux:base":  "mkdir -p dist/Handlers && mkdir -p dist/ssl && cp svc/handler.json dist/ && cp svc/*.js dist/ && cp svc/Handlers/*.js dist/Handlers/",
+      "build:railway":     "npm run build:linux:base && npm run build:linux:web && cp svc/config/Railway/* dist/ && cd db/MySQL/_Create && chmod +x ./Create.sh && ./Create.sh && cp ../_Distrib/MSF_Map.sql ../../../dist/"
    },
-   "repository": {
-      "type": "git",
-      "url": "https://github.com/MetaversalCorp/MSF_Map_Railway.git"
-   },
-   "author": "Metaversal Corporation",
+   "keywords": [],
+   "author": "",
    "license": "Apache-2.0",
    "dependencies": {
-      "@metaversalcorp/mvsf": "^0.3.0",
-      "@metaversalcorp/mvsql_mysql": "^0.1.0",
-      "mysql2": "^3.6.0"
-   },
-   "devDependencies": {
-      "nodemon": "^2.0.22"
+      "mkdirp": "^3.0.1"
    }
 }

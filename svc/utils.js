@@ -201,7 +201,6 @@ function InitSQL (pSQL, pServer, pInfo)
    g_pServer = pServer;
    g_pInfo   = pInfo;
 
-//RunQuery2 ({ sIPAddress: '10.10.1.100' }, { twRMRootIx: 1 }, Test, null, { sProc: 'get_RMRoot_Update', aData: [ 'twRMRootIx' ], Param: 0 });
    setInterval (EventFetch, 1000);
 }
 

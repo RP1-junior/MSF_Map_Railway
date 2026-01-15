@@ -1,0 +1,33 @@
+{
+   "_comment1": "'MVSF' contains Server Config Information for MVSF",
+   "MVSF": {
+      "_comment1": "If your server is using SSL, rename '_SSL' to 'SSL'",
+      "SSL": {
+         "key":   "./ssl/server.key",
+         "cert":  "./ssl/server.cert"
+      },
+
+      "_comment2": "Required for internal use.",
+      "IO": {
+         "bGlobalNotify": true
+      },
+
+      "_comment3_1": "key - Admin Key to allow user to modify the Map",
+      "_comment3_2": "port - The port the actual server application is listening on",
+      "key":  "",
+      "port": ""
+   },
+
+   "SQL": {
+      "type": "MYSQL",
+      "config": {
+         "connectionLimit":  10,
+         "host":             "",
+         "port":             "",
+         "user":             "",
+         "password":         "",
+         "database":         "",
+         "multipleStatements": true
+      }
+   }
+}

@@ -1,0 +1,38 @@
+{
+   "_comment1": "'MVSF' contains Server Config Information for MVSF",
+   "MVSF": {
+      "_comment1": "SSL is required, however if you want to just test it locally, rename 'SSL' to '_SSL' so it runs without using SSL",
+      "SSL": {
+         "key":   "./ssl/server.key",
+         "cert":  "./ssl/server.cert"
+      },
+
+      "_comment2": "Required for internal use.",
+      "IO": {
+         "bGlobalNotify": true
+      },
+
+      "_comment3_1": "key - Admin Key to allow user to modify the Map",
+      "_comment3_2": "port - The port the actual server application is listening on",
+      "key":  "",
+      "port": ""
+   },
+
+   "SQL": {
+      "type": "MSSQL",
+
+      "_comment1": "Keys under Install, will only be used when installing your DB",
+      "_comment2": "db_name - Name of the Database you wish to create",
+      "_comment3": "login_name - Specifies the name of the login to grant execute rights.",
+      "_comment4": "pathname - Full pathname (without the trailing backslash) of your new database's data and log files",
+      "install": {
+         "db_name":           "",
+         "login_name":        "",
+         "pathname":          ""
+      },
+
+      "config": {
+         "connectionString": ""
+      }
+   }
+}

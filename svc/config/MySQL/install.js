@@ -16,64 +16,18 @@
 ** SPDX-License-Identifier: Apache-2.0
 */
 
-const { MVSF         } = require ('@metaversalcorp/mvsf');
-const { InitSQL      } = require ('./utils.js');
-const Settings      = require ('./settings.json');
 const fs            = require ('fs');
 const path          = require ('path');
 const mysql         = require ('mysql2/promise');
-const zlib          = require ('zlib');
 
-const { MVSQL_MYSQL  } = require ('@metaversalcorp/mvsql_mysql');
+const Settings      = require ('./settings.json');
 
 /*******************************************************************************************************************************
 **                                                     Main                                                                   **
 *******************************************************************************************************************************/
 
-class AuthSimple
+class MVSF_Map_Install
 {
-   constructor ()
-   {
-   }
-
-   Exec (bREST, sAction, pConn, Session, pData, fnRSP, fn)
-   {
-      if (sAction == 'login')
-         this.#Login (Session, pData, fnRSP, fn);
-      else if (sAction == 'logout')
-         this.#Logout (Session, pData, fnRSP, fn);
-      else
-         fnRSP (fn, { nResult: -1 });
-   }
-
-   #Login (Session, pData, fnRSP, fn)
-   {
-      let pResult = { nResult: -1 };
-
-      if (pData && pData.acToken64U_RP1 == Settings.MVSF.key)
-      {
-         pResult.nResult           = 0;
-         pResult.sSessionToken     = Settings.MVSF.key;
-
-         Session.twRPersonaIx      = 1;
-      }
-
-      fnRSP (fn, pResult);
-   }
-
-   #Logout (Session, pData, fnRSP, fn)
-   {
-      Session.twRPersonaIx     = 0;
-      
-      fnRSP (fn, { nResult: 0 });
-   }
-}
-
-class MVSF_Map
-{
-   #pServer;
-   #pSQL;
-
    constructor ()
    {
       this.#ReadFromEnv (Settings.SQL.config, [ "host", "port", "user", "password", "database" ]);
@@ -85,24 +39,16 @@ class MVSF_Map
 
       if (bResult == false)
       {
-         console.log ('Beginning Install...');
+         console.log ('Starting Installation...');
          
-         this.#ProcessFabricConfig ();
+//         this.#ProcessFabricConfig ();
 
-         await this.#ExecSQL ('MSF_Map.sql', true);
+         bResult = await this.#ExecSQL ('MSF_Map.sql', true, [['[{MSF_Map}]', Settings.SQL.config.database]] );
+
+         if (bResult)
+            console.log ('Installation successfully completed...');
       }
-
-      console.log ('SQL Server Starting...');
-      switch (Settings.SQL.type)
-      {
-      case 'MYSQL':
-         this.#pSQL = new MVSQL_MYSQL (Settings.SQL.config, this.onSQLReady.bind (this));
-         break;
-
-      default:
-         console.log ('No Database was configured for this service.');
-         break;
-      }
+      else console.log ('DB Exists aborting installation...');
    }
 
    #GetToken (sToken)
@@ -122,40 +68,30 @@ class MVSF_Map
       }
    }
 
-   #ProcessFabricConfig ()
+   #EscapeRegExp (sToken)
    {
-      const sFabricPath = path.join (__dirname, 'web', 'public', 'fabric');
-
-      try
-      {
-         let sContent = fs.readFileSync (path.join (sFabricPath, 'sample.msf'), 'utf8');
-
-         // Replace all occurrences of <PUBLIC_DOMAIN> with the actual environment variable
-         // Check for PUBLIC_DOMAIN first, fallback to RAILWAY_PUBLIC_DOMAIN for Railway compatibility
-         const sPublicDomain = process.env.PUBLIC_DOMAIN || process.env.RAILWAY_PUBLIC_DOMAIN || '';
-         sContent = sContent.replace (/<PUBLIC_DOMAIN>/g, sPublicDomain);
-
-         fs.writeFileSync (path.join (sFabricPath, 'fabric.msf'), sContent, 'utf8');
-      }
-      catch (err)
-      {
-         console.log ('Error processing sample.msf: ', err);
-      }
+      return sToken.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
    }
 
-   async #ExecSQL (sFilename, bCreate)
+   async #ExecSQL (sFilename, bCreate, asToken)
    {
       const sSQLFile = path.join (__dirname, sFilename);
       const pConfig = { ...Settings.SQL.config };
       let pConn;
+      let aRegex = [];
       
       if (bCreate)
          delete pConfig.database; // Remove database from config to connect without it
 
-      console.log ('SQLExec START (' + sFilename + ')');
+      console.log ('Installing (' + sFilename + ')...');
      
       try 
       {
+         for (let i=0; i < asToken.length; i++)
+         {
+            aRegex.push (new RegExp (this.#EscapeRegExp (asToken[i][0]), "g"));
+         }            
+
          // Create connection
          pConn = await mysql.createConnection (pConfig);
 
@@ -185,10 +121,18 @@ class MVSF_Map
 
             for (j=0; j<a.length; j++)
                if (a[j].trim () != '')       // optional
-                  await pConn.query (a[j]);
+               {
+                  let stmt = a[j];
+                  for (let i=0; i < aRegex.length; i++)
+                  {
+                     stmt = stmt.replace (aRegex[i], asToken[i][1]);
+                  }
+
+                  await pConn.query (stmt);
+               }
          }
 
-         console.log ('SQLExec END (' + sFilename + ')');      
+         console.log ('Successfully installed (' + sFilename + ')');      
       } 
       catch (err) 
       {
@@ -200,25 +144,6 @@ class MVSF_Map
          {
             await pConn.end ();
          }
-      }
-   }
-
-   onSQLReady (pMVSQL, err)
-   {
-      if (pMVSQL)
-      {
-         this.#ReadFromEnv (Settings.MVSF, [ "nPort", "key" ]);
-
-         this.#pServer = new MVSF (Settings.MVSF, require ('./handler.json'), __dirname, new AuthSimple (), 'application/json');
-         this.#pServer.LoadHtmlSite (__dirname, [ './web/admin', './web/public']);
-         this.#pServer.Run ();
-
-         console.log ('SQL Server READY');
-         InitSQL (pMVSQL, this.#pServer, Settings.Info);
-      }
-      else
-      {
-         console.log ('SQL Server Connect Error: ', err);
       }
    }
 
@@ -262,5 +187,5 @@ class MVSF_Map
    }
 }
 
-const g_pServer = new MVSF_Map ();
-g_pServer.Run ();
+const g_pInstall = new MVSF_Map_Install ();
+g_pInstall.Run ();

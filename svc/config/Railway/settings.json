@@ -7,17 +7,18 @@
          "cert":  "./ssl/server.cert"
       },
 
-      "_comment2": "If your server is running REST AND requires a prefix to endpoint rename _REST to REST, and specify Prefix",
-      "REST": {
-         "sPrefix": ""
-      },
+      "_comment2": "Required for internal use.",
       "IO": {
          "bGlobalNotify": true
       },
 
-      "_comment3": "This will be your authentication Key you will pass from the website to allow scene editing",
-      "nPort": "<PORT>",
-      "key":   "<MVSADMINKEY>"
+      "_comment3_1": "key - Admin Key to allow user to modify the Map",
+      "_comment3_2": "port - The port the actual server application is listening on",
+      "key":   "<MVSADMINKEY>",
+      "port": "<PORT>",
+
+      "_comment4": "CompanyID",
+      "sCompanyId": "<MYCOMPANYID>"
    },
 
    "SQL": {
@@ -30,14 +31,6 @@
          "password":         "<MYSQLPASSWORD>",
          "database":         "<MYSQLDATABASE>",
          "multipleStatements": true
-      }
-   },
-
-   "_comment3": "'SQL' contains SQL Config Data used by MVSQL. Currently only support 'MSSQL'",
-   "_SQL": {
-      "type": "MSSQL",
-      "config": {
-         "connectionString": "Driver=SQL Server;Server=<DBHOST>;Database=<DBNAME>;Trusted_Connection=yes;"
       }
    }
 }
