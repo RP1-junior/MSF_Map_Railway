@@ -36,15 +36,15 @@
    <script type="text/javascript" src="js/vendor/jquery-3.7.1.min.js"></script>
    <script type="text/javascript" src="js/vendor/cdn.socket.io_4.8.1_socket.io.min.js"></script>
 
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVMF.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVSB.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVRest.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVXP.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVIO.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVRP.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVRP_Dev.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVRP_Fabric.js"></script>
-   <script type="text/javascript" src="https://cdn2.rp1.com/js/mv/MVRP_Map.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVMF.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVSB.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVRest.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVXP.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVIO.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVRP.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVRP_Dev.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVRP_Fabric.js"></script>
+   <script type="text/javascript" src="/js/vendor/mv/MVRP_Map.js"></script>
 
    <!-- App -->
    <script src="js/maputil.js"></script>
@@ -138,6 +138,22 @@
                            <label for="canvasSize" class="form-label w-100 m-0">Canvas&nbsp;Size</label>
                            <input type="text" class="form-control" id="canvasSize" placeholder="20" value="20" style="width:5rem">
                            <button type="submit" class="btn btn-outline-light" id="setCanvasSize">Set</button>
+                        </div>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <div class="dropdown-item mx-auto py-2">
+                           <div class="fabric-url input-group">
+                              <div class="form-floating flex-grow-1">
+                                 <input type="text" class="form-control form-control-sm" id="fabricUrl" placeholder="Publish a scene to generate this URL" value="" readonly>
+                                 <label for="fabricUrl">Attachment Point URL</label>
+                              </div>
+                              <button class="btn btn-outline-light" type="button" id="copyFabricUrl" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy URL" disabled>
+                                 <i class="fa-solid fa-copy"></i>
+                              </button>
+                           </div>
                         </div>
                      </li>
                   </ul>
