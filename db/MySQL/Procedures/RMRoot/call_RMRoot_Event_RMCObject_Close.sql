@@ -25,13 +25,13 @@ DELIMITER $$
 CREATE PROCEDURE call_RMRoot_Event_RMCObject_Close
 (
    IN    twRMRootIx                    BIGINT,
-   IN    twRMCObjectIx                 BIGINT,
+   IN    twRMCObjectIx_Close           BIGINT,
    OUT   bError                        INT
 )
 BEGIN
        DECLARE SBO_CLASS_RMROOT                           INT DEFAULT 70;
        DECLARE SBO_CLASS_RMCOBJECT                        INT DEFAULT 71;
-       DECLARE SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE  INT DEFAULT 0x02;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE      INT DEFAULT 0x02;
 
        DECLARE twEventIz BIGINT;
 
@@ -80,7 +80,7 @@ BEGIN
                         twRMRootIx,
                         SBO_CLASS_RMCOBJECT,
                         twRMCObjectIx,
-                        SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
                         twEventIz,
 
                         '{ }',
