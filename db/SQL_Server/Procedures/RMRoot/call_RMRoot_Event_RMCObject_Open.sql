@@ -43,7 +43,7 @@ CREATE PROCEDURE dbo.call_RMRoot_Event_RMCObject_Open
    @Transform_Scale_dY           FLOAT (53),
    @Transform_Scale_dZ           FLOAT (53),
    @Orbit_Spin_tmPeriod          BIGINT,
-   @Orbit_Spin_tmStart           BIGINT,
+   @Orbit_Spin_tmOrigin          BIGINT,
    @Orbit_Spin_dA                FLOAT (53),
    @Orbit_Spin_dB                FLOAT (53),
    @Bound_dX                     FLOAT (53),
@@ -72,8 +72,8 @@ BEGIN
             IF @bError = 0
          BEGIN
                INSERT dbo.RMCObject
-                      ( ObjectHead_Parent_wClass,  ObjectHead_Parent_twObjectIx,  ObjectHead_Self_wClass,  ObjectHead_twEventIz,  ObjectHead_wFlags,  Name_wsRMCObjectId,  Type_bType,  Type_bSubtype,  Type_bFiction,  Owner_twRPersonaIx,  Resource_qwResource,  Resource_sName,  Resource_sReference,  Transform_Position_dX,  Transform_Position_dY,  Transform_Position_dZ,  Transform_Rotation_dX,  Transform_Rotation_dY,  Transform_Rotation_dZ,  Transform_Rotation_dW,  Transform_Scale_dX,  Transform_Scale_dY,  Transform_Scale_dZ,  Orbit_Spin_tmPeriod,  Orbit_Spin_tmStart,  Orbit_Spin_dA,  Orbit_Spin_dB,  Bound_dX,  Bound_dY,  Bound_dZ,  Properties_fMass,  Properties_fGravity,  Properties_fColor,  Properties_fBrightness,  Properties_fReflectivity)
-               VALUES (@SBO_CLASS_RMROOT,         @twRMCObjectIx,                @SBO_CLASS_RMCOBJECT,     0,                     32,                @Name_wsRMCObjectId, @Type_bType, @Type_bSubtype, @Type_bFiction, @Owner_twRPersonaIx, @Resource_qwResource, @Resource_sName, @Resource_sReference, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmStart, @Orbit_Spin_dA, @Orbit_Spin_dB, @Bound_dX, @Bound_dY, @Bound_dZ, @Properties_fMass, @Properties_fGravity, @Properties_fColor, @Properties_fBrightness, @Properties_fReflectivity)
+                      ( ObjectHead_Parent_wClass,  ObjectHead_Parent_twObjectIx,  ObjectHead_Self_wClass,  ObjectHead_twEventIz,  ObjectHead_wFlags,  Name_wsRMCObjectId,  Type_bType,  Type_bSubtype,  Type_bFiction,  Owner_twRPersonaIx,  Resource_qwResource,  Resource_sName,  Resource_sReference,  Transform_Position_dX,  Transform_Position_dY,  Transform_Position_dZ,  Transform_Rotation_dX,  Transform_Rotation_dY,  Transform_Rotation_dZ,  Transform_Rotation_dW,  Transform_Scale_dX,  Transform_Scale_dY,  Transform_Scale_dZ,  Orbit_Spin_tmPeriod,  Orbit_Spin_tmOrigin,  Orbit_Spin_dA,  Orbit_Spin_dB,  Bound_dX,  Bound_dY,  Bound_dZ,  Properties_fMass,  Properties_fGravity,  Properties_fColor,  Properties_fBrightness,  Properties_fReflectivity)
+               VALUES (@SBO_CLASS_RMROOT,         @twRMCObjectIx,                @SBO_CLASS_RMCOBJECT,     0,                     32,                @Name_wsRMCObjectId, @Type_bType, @Type_bSubtype, @Type_bFiction, @Owner_twRPersonaIx, @Resource_qwResource, @Resource_sName, @Resource_sReference, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmOrigin, @Orbit_Spin_dA, @Orbit_Spin_dB, @Bound_dX, @Bound_dY, @Bound_dZ, @Properties_fMass, @Properties_fGravity, @Properties_fColor, @Properties_fBrightness, @Properties_fReflectivity)
 
                   SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
 
@@ -133,7 +133,7 @@ BEGIN
                                ', "pOrbit_Spin": ',   dbo.Format_Orbit_Spin
                                                       (
                                                          @Orbit_Spin_tmPeriod,
-                                                         @Orbit_Spin_tmStart,
+                                                         @Orbit_Spin_tmOrigin,
                                                          @Orbit_Spin_dA,
                                                          @Orbit_Spin_dB
                                                       ),

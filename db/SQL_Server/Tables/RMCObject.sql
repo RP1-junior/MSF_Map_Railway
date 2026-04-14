@@ -63,7 +63,7 @@ CREATE TABLE dbo.RMCObject
    Transform_Scale_dY                  FLOAT (53)      NOT NULL,
    Transform_Scale_dZ                  FLOAT (53)      NOT NULL,
    Orbit_Spin_tmPeriod                 BIGINT          NOT NULL,
-   Orbit_Spin_tmStart                  BIGINT          NOT NULL,
+   Orbit_Spin_tmStart                  BIGINT          NOT NULL,   -- this will get renamed to Orbit_Spin_tmOrigin at Version 2
    Orbit_Spin_dA                       FLOAT (53)      NOT NULL,
    Orbit_Spin_dB                       FLOAT (53)      NOT NULL,
    Bound_dX                            FLOAT (53)      NOT NULL,

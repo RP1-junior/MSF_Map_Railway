@@ -28,7 +28,7 @@ CREATE PROCEDURE call_RMCObject_Validate_Orbit_Spin
    IN    ObjectHead_Parent_twObjectIx  BIGINT,
    IN    twRMCObjectIx                 BIGINT,
    IN    Orbit_Spin_tmPeriod           BIGINT,
-   IN    Orbit_Spin_tmStart            BIGINT,
+   IN    Orbit_Spin_tmOrigin           BIGINT,
    IN    Orbit_Spin_dA                 DOUBLE,
    IN    Orbit_Spin_dB                 DOUBLE,
    INOUT nError                        INT
@@ -42,12 +42,12 @@ BEGIN
                    CALL call_Error (21, 'Orbit_Spin_tmPeriod is invalid', nError);
         END IF ;
 
-            IF Orbit_Spin_tmStart IS NULL
+            IF Orbit_Spin_tmOrigin IS NULL
           THEN
-                   CALL call_Error (21, 'Orbit_Spin_tmStart is NULL',     nError);
-        ELSEIF Orbit_Spin_tmStart NOT BETWEEN 0 AND Orbit_Spin_tmPeriod
+                   CALL call_Error (21, 'Orbit_Spin_tmOrigin is NULL',     nError);
+        ELSEIF Orbit_Spin_tmOrigin NOT BETWEEN 0 AND Orbit_Spin_tmPeriod
           THEN
-                   CALL call_Error (21, 'Orbit_Spin_tmStart is invalid',  nError);
+                   CALL call_Error (21, 'Orbit_Spin_tmOrigin is invalid',  nError);
         END IF ;
 
             IF Orbit_Spin_dA IS NULL OR Orbit_Spin_dA <> Orbit_Spin_dA

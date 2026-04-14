@@ -200,6 +200,7 @@
     <None Include="MySQL\Tables\Version.sql" />
     <None Include="MySQL\Version\000-Initialize_database.sql" />
     <None Include="MySQL\Version\001-Copy_data_from_old_database.sql" />
+    <None Include="MySQL\Version\002-Rename_tmStart_to_tmOrigin.sql" />
     <None Include="MySQL\_Create\Create.bat" />
     <None Include="MySQL\_Create\Create.sh" />
     <None Include="MySQL\_Create\Database.sql" />
@@ -402,6 +403,7 @@
     <None Include="SQL_Server\Tables\Version.sql" />
     <None Include="SQL_Server\Version\000-Initialize_database.sql" />
     <None Include="SQL_Server\Version\001-Copy_data_from_old_database.sql" />
+    <None Include="SQL_Server\Version\002-Rename_tmStart_to_tmOrigin.sql" />
     <None Include="SQL_Server\_Create\Create.bat" />
     <None Include="SQL_Server\_Create\Create.sh" />
     <None Include="SQL_Server\_Create\Database.sql" />

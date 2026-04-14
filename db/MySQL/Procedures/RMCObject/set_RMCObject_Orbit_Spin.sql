@@ -28,7 +28,7 @@ CREATE PROCEDURE set_RMCObject_Orbit_Spin
    IN    twRPersonaIx                  BIGINT,
    IN    twRMCObjectIx                 BIGINT,
    IN    Orbit_Spin_tmPeriod           DOUBLE,
-   IN    Orbit_Spin_tmStart            DOUBLE,
+   IN    Orbit_Spin_tmOrigin           DOUBLE,
    IN    Orbit_Spin_dA                 DOUBLE,
    IN    Orbit_Spin_dB                 DOUBLE,
    OUT   nResult                       INT
@@ -75,12 +75,12 @@ BEGIN
           CALL call_RMCObject_Validate (twRPersonaIx, twRMCObjectIx, ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, nError);
             IF nError = 0
           THEN
-                   CALL call_RMCObject_Validate_Orbit_Spin(ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, twRMCObjectIx, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, nError);
+                   CALL call_RMCObject_Validate_Orbit_Spin(ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, twRMCObjectIx, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, nError);
         END IF ;
 
             IF nError = 0
           THEN
-                   CALL call_RMCObject_Event_Orbit_Spin(twRMCObjectIx, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, bError);
+                   CALL call_RMCObject_Event_Orbit_Spin(twRMCObjectIx, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, bError);
                      IF bError = 0
                    THEN
                              SET bCommit = 1;

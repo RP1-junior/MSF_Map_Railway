@@ -25,7 +25,7 @@ CREATE PROCEDURE dbo.call_RMCObject_Event_Orbit_Spin
 (
    @twRMCObjectIx                BIGINT,
    @Orbit_Spin_tmPeriod          FLOAT (53),
-   @Orbit_Spin_tmStart           FLOAT (53),
+   @Orbit_Spin_tmOrigin          FLOAT (53),
    @Orbit_Spin_dA                FLOAT (53),
    @Orbit_Spin_dB                FLOAT (53)
 )
@@ -46,7 +46,7 @@ BEGIN
          BEGIN
                UPDATE dbo.RMCObject
                   SET Orbit_Spin_tmPeriod = @Orbit_Spin_tmPeriod,
-                      Orbit_Spin_tmStart  = @Orbit_Spin_tmStart,
+                      Orbit_Spin_tmOrigin = @Orbit_Spin_tmOrigin,
                       Orbit_Spin_dA       = @Orbit_Spin_dA,
                       Orbit_Spin_dB       = @Orbit_Spin_dB
                 WHERE ObjectHead_Self_twObjectIx = @twRMCObjectIx
@@ -72,7 +72,7 @@ BEGIN
                                  '"pOrbit_Spin": ',   dbo.Format_Orbit_Spin
                                                       (
                                                          @Orbit_Spin_tmPeriod,
-                                                         @Orbit_Spin_tmStart,
+                                                         @Orbit_Spin_tmOrigin,
                                                          @Orbit_Spin_dA,
                                                          @Orbit_Spin_dB
                                                       ),

@@ -85,7 +85,7 @@ BEGIN
                   ', "pOrbit_Spin": ',   dbo.Format_Orbit_Spin
                                          (
                                             c.Orbit_Spin_tmPeriod,
-                                            c.Orbit_Spin_tmStart,
+                                            c.Orbit_Spin_tmOrigin,
                                             c.Orbit_Spin_dA,
                                             c.Orbit_Spin_dB
                                          ),

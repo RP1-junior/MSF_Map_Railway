@@ -44,7 +44,7 @@ CREATE PROCEDURE call_RMRoot_Event_RMCObject_Open
    IN    Transform_Scale_dY            DOUBLE,
    IN    Transform_Scale_dZ            DOUBLE,
    IN    Orbit_Spin_tmPeriod           BIGINT,
-   IN    Orbit_Spin_tmStart            BIGINT,
+   IN    Orbit_Spin_tmOrigin           BIGINT,
    IN    Orbit_Spin_dA                 DOUBLE,
    IN    Orbit_Spin_dB                 DOUBLE,
    IN    Bound_dX                      DOUBLE,
@@ -69,8 +69,8 @@ BEGIN
             IF bError = 0
           THEN
                  INSERT INTO RMCObject
-                        (ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, ObjectHead_Self_wClass, ObjectHead_twEventIz, ObjectHead_wFlags, Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity)
-                 VALUES (SBO_CLASS_RMROOT,         twRMRootIx,                   SBO_CLASS_RMCOBJECT,    0,                    32,                Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity);
+                        (ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, ObjectHead_Self_wClass, ObjectHead_twEventIz, ObjectHead_wFlags, Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity)
+                 VALUES (SBO_CLASS_RMROOT,         twRMRootIx,                   SBO_CLASS_RMCOBJECT,    0,                    32,                Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity);
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 
@@ -130,7 +130,7 @@ BEGIN
                                    ', "pOrbit_Spin": ',   Format_Orbit_Spin
                                                           (
                                                              Orbit_Spin_tmPeriod,
-                                                             Orbit_Spin_tmStart,
+                                                             Orbit_Spin_tmOrigin,
                                                              Orbit_Spin_dA,
                                                              Orbit_Spin_dB
                                                           ),

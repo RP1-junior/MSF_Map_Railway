@@ -1414,5 +1414,11 @@
     <None Include="MySQL\Procedures\RMTObject\get_RMTObject_Compute.sql">
       <Filter>MySQL\Procedures\RMTObject\Get</Filter>
     </None>
+    <None Include="SQL_Server\Version\002-Rename_tmStart_to_tmOrigin.sql">
+      <Filter>SQL_Server\Version</Filter>
+    </None>
+    <None Include="MySQL\Version\002-Rename_tmStart_to_tmOrigin.sql">
+      <Filter>MySQL\Version</Filter>
+    </None>
   </ItemGroup>
 </Project>

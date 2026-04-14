@@ -27,7 +27,7 @@ CREATE PROCEDURE dbo.call_RMCObject_Validate_Orbit_Spin
    @ObjectHead_Parent_twObjectIx BIGINT,
    @twRMCObjectIx                BIGINT,
    @Orbit_Spin_tmPeriod          BIGINT,
-   @Orbit_Spin_tmStart           BIGINT,
+   @Orbit_Spin_tmOrigin          BIGINT,
    @Orbit_Spin_dA                FLOAT (53),
    @Orbit_Spin_dB                FLOAT (53),
    @nError                       INT = 0         OUTPUT
@@ -44,10 +44,10 @@ BEGIN
        ELSE IF @Orbit_Spin_tmPeriod < 0
                EXEC dbo.call_Error 21, 'Orbit_Spin_tmPeriod is invalid', @nError OUTPUT
 
-            IF @Orbit_Spin_tmStart IS NULL
-               EXEC dbo.call_Error 21, 'Orbit_Spin_tmStart is NULL',     @nError OUTPUT
-       ELSE IF @Orbit_Spin_tmStart NOT BETWEEN 0 AND @Orbit_Spin_tmPeriod
-               EXEC dbo.call_Error 21, 'Orbit_Spin_tmStart is invalid',  @nError OUTPUT
+            IF @Orbit_Spin_tmOrigin IS NULL
+               EXEC dbo.call_Error 21, 'Orbit_Spin_tmOrigin is NULL',    @nError OUTPUT
+       ELSE IF @Orbit_Spin_tmOrigin NOT BETWEEN 0 AND @Orbit_Spin_tmPeriod
+               EXEC dbo.call_Error 21, 'Orbit_Spin_tmOrigin is invalid', @nError OUTPUT
 
             IF @Orbit_Spin_dA IS NULL OR @Orbit_Spin_dA <> @Orbit_Spin_dA
                EXEC dbo.call_Error 21, 'Orbit_Spin_dA is NULL or NaN',   @nError OUTPUT
