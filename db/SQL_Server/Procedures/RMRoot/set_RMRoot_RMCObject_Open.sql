@@ -45,7 +45,7 @@ CREATE PROCEDURE dbo.set_RMRoot_RMCObject_Open
    @Transform_Scale_dY           FLOAT (53),
    @Transform_Scale_dZ           FLOAT (53),
    @Orbit_Spin_tmPeriod          BIGINT,
-   @Orbit_Spin_tmStart           BIGINT,
+   @Orbit_Spin_tmOrigin          BIGINT,
    @Orbit_Spin_dA                FLOAT (53),
    @Orbit_Spin_dB                FLOAT (53),
    @Bound_dX                     FLOAT (53),
@@ -93,14 +93,14 @@ BEGIN
                    EXEC dbo.call_RMCObject_Validate_Owner      @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Owner_twRPersonaIx, @nError OUTPUT
                    EXEC dbo.call_RMCObject_Validate_Resource   @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Resource_qwResource, @Resource_sName, @Resource_sReference, @nError OUTPUT
                    EXEC dbo.call_RMCObject_Validate_Transform  @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @nError OUTPUT
-                   EXEC dbo.call_RMCObject_Validate_Orbit_Spin @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmStart, @Orbit_Spin_dA, @Orbit_Spin_dB, @nError OUTPUT
+                   EXEC dbo.call_RMCObject_Validate_Orbit_Spin @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmOrigin, @Orbit_Spin_dA, @Orbit_Spin_dB, @nError OUTPUT
                    EXEC dbo.call_RMCObject_Validate_Bound      @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Bound_dX, @Bound_dY, @Bound_dZ, @nError OUTPUT
                    EXEC dbo.call_RMCObject_Validate_Properties @SBO_CLASS_RMROOT, @twRMRootIx, 0, @Properties_fMass, @Properties_fGravity, @Properties_fColor, @Properties_fBrightness, @Properties_fReflectivity, @nError OUTPUT
            END
 
             IF @nError = 0
          BEGIN
-                   EXEC @bError = dbo.call_RMRoot_Event_RMCObject_Open @twRMRootIx, @Name_wsRMCObjectId, @Type_bType, @Type_bSubtype, @Type_bFiction, @Owner_twRPersonaIx, @Resource_qwResource, @Resource_sName, @Resource_sReference, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmStart, @Orbit_Spin_dA, @Orbit_Spin_dB, @Bound_dX, @Bound_dY, @Bound_dZ, @Properties_fMass, @Properties_fGravity, @Properties_fColor, @Properties_fBrightness, @Properties_fReflectivity, @twRMCObjectIx_Open OUTPUT
+                   EXEC @bError = dbo.call_RMRoot_Event_RMCObject_Open @twRMRootIx, @Name_wsRMCObjectId, @Type_bType, @Type_bSubtype, @Type_bFiction, @Owner_twRPersonaIx, @Resource_qwResource, @Resource_sName, @Resource_sReference, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmOrigin, @Orbit_Spin_dA, @Orbit_Spin_dB, @Bound_dX, @Bound_dY, @Bound_dZ, @Properties_fMass, @Properties_fGravity, @Properties_fColor, @Properties_fBrightness, @Properties_fReflectivity, @twRMCObjectIx_Open OUTPUT
                      IF @bError = 0
                   BEGIN
                         SELECT @twRMCObjectIx_Open AS twRMCObjectIx

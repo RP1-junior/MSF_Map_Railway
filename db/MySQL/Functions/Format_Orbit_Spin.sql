@@ -25,14 +25,14 @@ DELIMITER $$
 CREATE FUNCTION Format_Orbit_Spin
 (
    tmPeriod                 BIGINT,
-   tmStart                  BIGINT,
+   tmOrigin                 BIGINT,
    dA                       DOUBLE,
    dB                       DOUBLE
 )
 RETURNS VARCHAR (256)
 DETERMINISTIC
 BEGIN
-      RETURN CONCAT ('{ "tmPeriod": ', CAST(tmPeriod AS CHAR), ', "tmStart": ', CAST(tmStart AS CHAR), ', "dA": ', Format_Double(dA), ', "dB": ', Format_Double(dB), ' }');
+      RETURN CONCAT ('{ "tmPeriod": ', CAST(tmPeriod AS CHAR), ', "tmOrigin": ', CAST(tmOrigin AS CHAR), ', "dA": ', Format_Double(dA), ', "dB": ', Format_Double(dB), ' }');
 END$$
   
 DELIMITER ;

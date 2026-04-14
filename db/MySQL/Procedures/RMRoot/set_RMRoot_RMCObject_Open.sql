@@ -46,7 +46,7 @@ CREATE PROCEDURE set_RMRoot_RMCObject_Open
    IN    Transform_Scale_dY            DOUBLE,
    IN    Transform_Scale_dZ            DOUBLE,
    IN    Orbit_Spin_tmPeriod           BIGINT,
-   IN    Orbit_Spin_tmStart            BIGINT,
+   IN    Orbit_Spin_tmOrigin           BIGINT,
    IN    Orbit_Spin_dA                 DOUBLE,
    IN    Orbit_Spin_dB                 DOUBLE,
    IN    Bound_dX                      DOUBLE,
@@ -109,14 +109,14 @@ BEGIN
                    CALL call_RMCObject_Validate_Owner      (SBO_CLASS_RMROOT, twRMRootIx, 0, Owner_twRPersonaIx, nError);
                    CALL call_RMCObject_Validate_Resource   (SBO_CLASS_RMROOT, twRMRootIx, 0, Resource_qwResource, Resource_sName, Resource_sReference, nError);
                    CALL call_RMCObject_Validate_Transform  (SBO_CLASS_RMROOT, twRMRootIx, 0, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, nError);
-                   CALL call_RMCObject_Validate_Orbit_Spin (SBO_CLASS_RMROOT, twRMRootIx, 0, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, nError);
+                   CALL call_RMCObject_Validate_Orbit_Spin (SBO_CLASS_RMROOT, twRMRootIx, 0, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, nError);
                    CALL call_RMCObject_Validate_Bound      (SBO_CLASS_RMROOT, twRMRootIx, 0, Bound_dX, Bound_dY, Bound_dZ, nError);
                    CALL call_RMCObject_Validate_Properties (SBO_CLASS_RMROOT, twRMRootIx, 0, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity, nError);
         END IF ;
 
             IF nError = 0
           THEN
-                   CALL call_RMRoot_Event_RMCObject_Open (twRMRootIx, Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmStart, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity, twRMCObjectIx_Open, bError);
+                   CALL call_RMRoot_Event_RMCObject_Open (twRMRootIx, Name_wsRMCObjectId, Type_bType, Type_bSubtype, Type_bFiction, Owner_twRPersonaIx, Resource_qwResource, Resource_sName, Resource_sReference, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, Orbit_Spin_tmPeriod, Orbit_Spin_tmOrigin, Orbit_Spin_dA, Orbit_Spin_dB, Bound_dX, Bound_dY, Bound_dZ, Properties_fMass, Properties_fGravity, Properties_fColor, Properties_fBrightness, Properties_fReflectivity, twRMCObjectIx_Open, bError);
                      IF bError = 0
                    THEN
                           SELECT twRMCObjectIx_Open AS twRMCObjectIx;

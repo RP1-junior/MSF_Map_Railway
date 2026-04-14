@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS RMCObject
    Transform_Scale_dY                  DOUBLE            NOT NULL,
    Transform_Scale_dZ                  DOUBLE            NOT NULL,
    Orbit_Spin_tmPeriod                 BIGINT            NOT NULL,
-   Orbit_Spin_tmStart                  BIGINT            NOT NULL,
+   Orbit_Spin_tmStart                  BIGINT            NOT NULL,   -- this will get renamed to Orbit_Spin_tmOrigin at Version 2
    Orbit_Spin_dA                       DOUBLE            NOT NULL,
    Orbit_Spin_dB                       DOUBLE            NOT NULL,
    Bound_dX                            DOUBLE            NOT NULL,

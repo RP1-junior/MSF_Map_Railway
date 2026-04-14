@@ -59,7 +59,7 @@ GO
 
    IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'WebService')
 BEGIN
-        CREATE USER WebService FOR LOGIN [{Login_Name}] WITH DEFAULT_SCHEMA = dbo
+        CREATE USER WebService FOR LOGIN [[{Login_Name}]] WITH DEFAULT_SCHEMA = dbo
   END
 GO
 

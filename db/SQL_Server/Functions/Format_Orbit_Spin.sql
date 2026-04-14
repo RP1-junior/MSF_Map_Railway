@@ -24,7 +24,7 @@ GO
 CREATE FUNCTION dbo.Format_Orbit_Spin
 (
    @tmPeriod                 BIGINT,
-   @tmStart                  BIGINT,
+   @tmOrigin                 BIGINT,
    @dA                       FLOAT (53),
    @dB                       FLOAT (53)
 )
@@ -33,7 +33,7 @@ AS
 BEGIN
       RETURN '{ ' + 
                 '"tmPeriod": ' + CAST (@tmPeriod AS NVARCHAR (32)) + ', ' +
-                '"tmStart": '  + CAST (@tmStart  AS NVARCHAR (32)) + ', ' +
+                '"tmOrigin": ' + CAST (@tmOrigin AS NVARCHAR (32)) + ', ' +
                 '"dA": '       + dbo.Format_Double (@dA)           + ', ' +
                 '"dB": '       + dbo.Format_Double (@dB)           +
              ' }'

@@ -27,7 +27,7 @@ CREATE PROCEDURE dbo.set_RMCObject_Orbit_Spin
    @twRPersonaIx                 BIGINT,
    @twRMCObjectIx                BIGINT,
    @Orbit_Spin_tmPeriod          FLOAT (53),
-   @Orbit_Spin_tmStart           FLOAT (53),
+   @Orbit_Spin_tmOrigin          FLOAT (53),
    @Orbit_Spin_dA                FLOAT (53),
    @Orbit_Spin_dB                FLOAT (53)
 )
@@ -59,12 +59,12 @@ BEGIN
 
             IF @nError = 0
          BEGIN
-                   EXEC dbo.call_RMCObject_Validate_Orbit_Spin @ObjectHead_Parent_wClass, @ObjectHead_Parent_twObjectIx, @twRMCObjectIx, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmStart, @Orbit_Spin_dA, @Orbit_Spin_dB, @nError OUTPUT
+                   EXEC dbo.call_RMCObject_Validate_Orbit_Spin @ObjectHead_Parent_wClass, @ObjectHead_Parent_twObjectIx, @twRMCObjectIx, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmOrigin, @Orbit_Spin_dA, @Orbit_Spin_dB, @nError OUTPUT
            END
 
             IF @nError = 0
          BEGIN
-                   EXEC @bError = dbo.call_RMCObject_Event_Orbit_Spin @twRMCObjectIx, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmStart, @Orbit_Spin_dA, @Orbit_Spin_dB
+                   EXEC @bError = dbo.call_RMCObject_Event_Orbit_Spin @twRMCObjectIx, @Orbit_Spin_tmPeriod, @Orbit_Spin_tmOrigin, @Orbit_Spin_dA, @Orbit_Spin_dB
                      IF @bError = 0
                   BEGIN
                         SET @bCommit = 1

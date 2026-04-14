@@ -26,7 +26,7 @@ CREATE PROCEDURE call_RMCObject_Event_Orbit_Spin
 (
    IN    twRMCObjectIx                 BIGINT,
    IN    Orbit_Spin_tmPeriod           DOUBLE,
-   IN    Orbit_Spin_tmStart            DOUBLE,
+   IN    Orbit_Spin_tmOrigin           DOUBLE,
    IN    Orbit_Spin_dA                 DOUBLE,
    IN    Orbit_Spin_dB                 DOUBLE,
    OUT   bError                        INT
@@ -43,7 +43,7 @@ BEGIN
           THEN
                  UPDATE RMCObject AS o
                     SET o.Orbit_Spin_tmPeriod = Orbit_Spin_tmPeriod,
-                        o.Orbit_Spin_tmStart  = Orbit_Spin_tmStart,
+                        o.Orbit_Spin_tmOrigin = Orbit_Spin_tmOrigin,
                         o.Orbit_Spin_dA       = Orbit_Spin_dA,
                         o.Orbit_Spin_dB       = Orbit_Spin_dB
                   WHERE o.ObjectHead_Self_twObjectIx = twRMCObjectIx;
@@ -69,7 +69,7 @@ BEGIN
                                      '"pOrbit_Spin": ',   Format_Orbit_Spin
                                                           (
                                                              Orbit_Spin_tmPeriod,
-                                                             Orbit_Spin_tmStart,
+                                                             Orbit_Spin_tmOrigin,
                                                              Orbit_Spin_dA,
                                                              Orbit_Spin_dB
                                                           ),
